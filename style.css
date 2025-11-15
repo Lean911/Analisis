@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    
+    background: #076ff8;
+    
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+nav a{
+    
+    display: flexbox;
+    width: 70px;
+    height: 70px;
+    text-align: right;
+    line-height: 70px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.5s;
+}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Leandro Fernández - Analista Funcional y Consultor en Sistemas. Especializado en análisis funcional, implementación de ERP/CRM, gestión de proyectos IT y análisis de datos."
+    />
+    <meta
+      name="keywords"
+      content="analista funcional, consultoría sistemas, ERP, CRM, gestión proyectos IT, análisis datos, Business Intelligence"
+    />
+    <meta name="author" content="Leandro Fernández" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Leandro Fernández | Consultoría en Sistemas"
+    />
+    <meta
+      property="og:description"
+      content="Analista Funcional especializado en transformar ideas en soluciones de software exitosas. Consultoría en sistemas, ERP/CRM y gestión de proyectos IT."
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Leandro Fernández | Consultoría en Sistemas"
+    />
+    <meta
+      property="twitter:description"
+      content="Analista Funcional especializado en transformar ideas en soluciones de software exitosas."
+    />
+
+    <title>Leandro Fernández | Consultoría en Sistemas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .animate-fade-in-delay {
+        animation: fadeIn 1s ease-out 0.3s both;
+      }
+
+      /* Mejora para imágenes con lazy loading */
+      img[loading="lazy"] {
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      img[loading="lazy"].loaded {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <nav
+      id="navbar"
+      class="bg-blue-600 text-white p-4 fixed w-full top-0 shadow-lg transition-transform duration-300 z-50"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-semibold">
+          <a href="index.html">Leandro Fernández</a>
+        </h1>
+
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a href="index.html" class="font-bold text-white">Inicio</a>
+          </li>
+          <li>
+            <a href="#sobre-mi" class="hover:text-blue-200 transition-colors"
+              >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a href="#servicios" class="hover:text-blue-200 transition-colors"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a
+              href="experiencia.html"
+              class="hover:text-blue-200 transition-colors"
+              >Experiencia</a
+            >
+          </li>
+          <li>
+            <a
+              href="contacto.html"
+              class="hover:text-blue-200 transition-colors"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden pt-4">
+        <ul class="flex flex-col space-y-2">
+          <li>
+            <a
+              href="index.html"
+              class="block py-2 px-2 text-white font-bold bg-blue-700 rounded"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#sobre-mi"
+              class="block py-2 px-2 hover:bg-blue-700 rounded transition-colors"
+              >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a
+              href="#servicios"
+              class="block py-2 px-2 hover:bg-blue-700 rounded transition-colors"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a
+              href="experiencia.html"
+              class="block py-2 px-2 hover:bg-blue-700 rounded transition-colors"
+              >Experiencia</a
+            >
+          </li>
+          <li>
+            <a
+              href="contacto.html"
+              class="block py-2 px-2 hover:bg-blue-700 rounded transition-colors"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section
+      class="min-h-screen container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12 px-6 pt-20 md:pt-0"
+    >
+      <div class="text-left animate-fade-in">
+        <h2
+          class="text-5xl md:text-6xl font-extrabold text-blue-800 mb-6 leading-tight"
+        >
+          Transformo ideas en soluciones de software exitosas.
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mb-8 leading-relaxed">
+          Como Analista Funcional, soy el puente entre tus objetivos de negocio
+          y el equipo técnico, garantizando que tus proyectos de IT se entreguen
+          a tiempo y sin sorpresas.
+        </p>
+        <a
+          href="contacto.html"
+          class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 text-lg transition-all duration-300 hover:scale-105 inline-block focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          aria-label="Ir a la página de contacto"
+          >Hablemos de tu proyecto</a
+        >
+      </div>
+
+      <div class="flex justify-center items-center animate-fade-in-delay">
+        <img
+          src="img/undraw_work-time_zbsw.svg"
+          alt="Ilustración representando consultoría en sistemas y análisis funcional"
+          class="w-full max-w-lg transition-transform duration-300 hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+    </section>
+    <section class="py-20 px-6 bg-white" id="sobre-mi">
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-10"
+      >
+        <div class="md:w-1/2 text-left">
+          <h3
+            class="text-3xl font-semibold mb-6 text-blue-700"
+            id="sobre-mi-titulo"
+          >
+            Sobre mí
+          </h3>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Inicié mi camino en el mundo de los sistemas en 2019, descubriendo
+            una profunda afinidad por la tecnología y su impacto en los procesos
+            organizacionales. Mis primeros proyectos estuvieron orientados al
+            desarrollo de páginas web, la generación de reportes en Business
+            Intelligence para la toma de decisiones y la elaboración de
+            documentación funcional y casos de uso.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Más adelante, formé parte de un proyecto de
+            <strong>billetera digital destinada al sector agroindustrial</strong
+            >, donde, con un rol más estratégico, me desempeñé como
+            <strong>nexo entre áreas técnicas y no técnicas</strong>,
+            transformando requerimientos de equipos internos —producto, legales
+            y operaciones— en especificaciones funcionales claras y accionables.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Actualmente, me desempeño como <strong>Analista Funcional</strong>,
+            con experiencia en <strong>gestión de equipos</strong>,
+            <strong>relevamiento y priorización de requerimientos</strong> y
+            <strong>análisis de procesos críticos</strong>.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Trabajo de manera colaborativa con equipos interdisciplinarios
+            dentro del <strong>sector salud</strong>, aplicando
+            <strong>metodologías ágiles</strong> y herramientas de gestión para
+            garantizar una comunicación fluida, una correcta traducción de
+            necesidades de negocio en soluciones tecnológicas y una
+            implementación eficiente de los proyectos.
+          </p>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center md:justify-end">
+          <img
+            src="img/LeandroIMG.jpg"
+            alt="Leandro Fernández - Analista Funcional y Consultor en Sistemas"
+            class="rounded-2xl shadow-lg w-80 md:w-96 object-cover transition-transform duration-300 hover:scale-105"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 px-6 bg-gray-100 text-center"
+      id="servicios"
+      aria-labelledby="servicios-titulo"
+    >
+      <h3
+        class="text-3xl font-semibold mb-12 text-blue-700"
+        id="servicios-titulo"
+      >
+        Mis Servicios
+      </h3>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+      >
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03]"
+          role="article"
+        >
+          <img
+            src="img/undraw_data-analysis_b7cp.svg"
+            alt="Ilustración de análisis funcional"
+            class="w-full h-40 object-contain mb-6"
+            loading="lazy"
+          />
+          <h4 class="text-xl font-semibold text-blue-800 mb-3">
+            Análisis Funcional
+          </h4>
+          <p class="text-gray-600 leading-relaxed">
+            Relevamiento de procesos, documentación y especificación funcional
+            para desarrollo o mejoras de sistemas.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03]"
+          role="article"
+        >
+          <img
+            src="img/undraw_server-status_7viz.svg"
+            alt="Ilustración de implementación de ERP y CRM"
+            class="w-full h-40 object-contain mb-6"
+            loading="lazy"
+          />
+          <h4 class="text-xl font-semibold text-blue-800 mb-3">
+            Implementación de ERP / CRM
+          </h4>
+          <p class="text-gray-600 leading-relaxed">
+            Asesoramiento en selección, configuración e integración de
+            soluciones empresariales.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03]"
+          role="article"
+        >
+          <img
+            src="img/undraw_data-reports_l2u3.svg"
+            alt="Ilustración de gestión de proyectos IT"
+            class="w-full h-40 object-contain mb-6"
+            loading="lazy"
+          />
+          <h4 class="text-xl font-semibold text-blue-800 mb-3">
+            Gestión de Proyectos IT
+          </h4>
+          <p class="text-gray-600 leading-relaxed">
+            Planificación, seguimiento y coordinación de proyectos tecnológicos
+            bajo metodologías ágiles y cascada.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03]"
+          role="article"
+        >
+          <img
+            src="img/undraw_scrum-board_uqku.svg"
+            alt="Ilustración de análisis de datos"
+            class="w-full h-40 object-contain mb-6"
+            loading="lazy"
+          />
+          <h4 class="text-xl font-semibold text-blue-800 mb-3">
+            Análisis de datos
+          </h4>
+          <p class="text-gray-600 leading-relaxed">
+            Capacidad analítica de datos para toma de decisiones empresariales.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 text-center bg-blue-600 text-white">
+      <h3 class="text-2xl font-semibold mb-4">
+        ¿Querés mejorar la gestión de tus sistemas?
+      </h3>
+      <p class="mb-6">
+        Podés contactarme directamente a través de WhatsApp o LinkedIn.
+      </p>
+      <div class="flex justify-center space-x-6">
+        <a
+          href="https://wa.me/541132140021"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+          aria-label="Contactar por WhatsApp"
+          >WhatsApp</a
+        >
+        <a
+          href="https://www.linkedin.com/in/leandro-fernandez91/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+          aria-label="Ver perfil de LinkedIn"
+          >LinkedIn</a
+        >
+      </div>
+    </section>
+
+    <!-- Botón de scroll to top -->
+    <button
+      id="scroll-top-btn"
+      class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 opacity-0 pointer-events-none z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      aria-label="Volver arriba"
+      title="Volver arriba"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        ></path>
+      </svg>
+    </button>
+
+    <footer class="bg-gray-900 text-gray-300 text-center py-4">
+      <p>© 2025 Leandro Fernández - Consultoría en Sistemas</p>
+    </footer>
+
+    <script>
+      // --- Lógica para ocultar/mostrar navbar al hacer scroll ---
+      let lastScrollTop = 0;
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", () => {
+        const currentScroll =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop && currentScroll > 50) {
+          // Scrolleando hacia abajo → ocultar
+          navbar.style.transform = "translateY(-100%)";
+        } else {
+          // Scrolleando hacia arriba → mostrar
+          navbar.style.transform = "translateY(0)";
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      });
+
+      // --- Lógica para el menú de hamburguesa ---
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        // Alterna la clase 'hidden' en el menú móvil
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // --- Botón de scroll to top ---
+      const scrollTopBtn = document.getElementById("scroll-top-btn");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.remove("opacity-0", "pointer-events-none");
+          scrollTopBtn.classList.add("opacity-100");
+        } else {
+          scrollTopBtn.classList.add("opacity-0", "pointer-events-none");
+          scrollTopBtn.classList.remove("opacity-100");
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // --- Lazy loading de imágenes ---
+      if ("loading" in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach((img) => {
+          img.addEventListener("load", function () {
+            this.classList.add("loaded");
+          });
+          if (img.complete) {
+            img.classList.add("loaded");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
